@@ -6,12 +6,23 @@
 @import "base/general";
 @import "../blocks/modules";
 
+$main-color: #fff;
+$light-color: #65e496;
+
 body {
     font-family: "Roboto Slab", serif;
 }
 
+.wrap {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
 .page-main {
     background: linear-gradient(150deg, #426384, #54b7a1);
+    color: $main-color;
+    padding-bottom: 162px;
 }
 
 .header {
@@ -32,13 +43,29 @@ body {
         display: flex;
         justify-content: flex-end;
 
+        &__link {
+            color: $main-color;
+            text-decoration: none;
+        }
+
         &__item {
+            box-sizing: border-box;
+            height: 26px;
             margin-left: 12px;
             margin-right: 11px;
             font-family: "Open Sans", sans-serif;
             font-size: 16px;
-            color: #fff;
             letter-spacing: 0.2px;
+            border-bottom: 3px solid transparent;
+            transition: .3s;
+
+            &.active {
+                border-bottom: 3px solid $light-color;
+            }
+
+            &:hover {
+                border-bottom: 3px solid $light-color;
+            }
 
             &:last-of-type {
                 margin-right: 0;
@@ -47,9 +74,71 @@ body {
     }
 }
 
-.wrap {
-    width: 100%;
-    max-width: 1170px;
-    margin: 0 auto;
+.block-text {
+    flex-basis: calc(93% - 500px);
+
+    &__name {
+        font-family: "Open Sans", sans-serif;
+        font-size: 18px;
+        margin-top: 0;
+        letter-spacing: 1.1px;
+    }
+
+    &__title {
+        font-size: 48px;
+        font-weight: 700;
+        letter-spacing: 1.9px;
+        margin-top: 30px;
+        margin-bottom: 45px;
+
+        span {
+            display: block;
+            color: $light-color;
+            font-size: 18px;
+            letter-spacing: 0.9px;
+            margin-top: 10px;
+        }
+    }
+
+    &__description {
+        font-family: "Open Sans", sans-serif;
+        font-size: 15px;
+        line-height: 24px;
+        margin-bottom: 24px;
+        letter-spacing: 0.7px;
+    }
+
+    &__btn {
+        display: block;
+        background-color: $light-color;
+        color: $main-color;
+        text-decoration: none;
+        max-width: 250px;
+        text-align: center;
+        border-radius: 3px;
+        font-size: 18px;
+        margin-top: 48px;
+        padding: 14px 0;
+        letter-spacing: 0.7px;
+        margin-bottom: 19px;
+    }
+
+    & small {
+        font-style: italic;
+    }
 }
 
+.block-book {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 180px;
+
+    &-demo {
+        display: block;
+        flex-basis: 500px;
+        width: 447px;
+        height: 639px;
+        background-image: url("../img/book.png");
+        background-repeat: no-repeat;
+    }
+}
