@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="zxx">
     <head>
         <meta charset="utf-8">
         <meta content="IE=edge" http-equiv="X-UA-Compatible">
@@ -26,6 +26,7 @@
         <link href="../img/favicon/apple-touch-icon-1024x1024.png" rel="apple-touch-icon" sizes="1024x1024">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i|Roboto+Slab:100,400,700&display=swap"
               rel="stylesheet">
+        <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
         <link href="../styles/main.css" rel="stylesheet">
     </head>
     <body>
@@ -39,9 +40,9 @@
                             <li class="header-list__item"><a class="header-list__link" href="#about">About</a></li>
                             <li class="header-list__item"><a class="header-list__link" href="#contents">Contents</a>
                             </li>
-                            <li class="header-list__item"><a class="header-list__link" href="">Books</a></li>
+                            <li class="header-list__item"><a class="header-list__link" href="#books">Books</a></li>
                             <li class="header-list__item"><a class="header-list__link" href="">Education</a></li>
-                            <li class="header-list__item"><a class="header-list__link" href="">Skills</a></li>
+                            <li class="header-list__item"><a class="header-list__link" href="#skills">Skills</a></li>
                             <li class="header-list__item"><a class="header-list__link" href="">Portfolio</a></li>
                             <li class="header-list__item"><a class="header-list__link" href="">Clients</a></li>
                             <li class="header-list__item"><a class="header-list__link" href="">Contacts</a></li>
@@ -49,7 +50,10 @@
                     </div>
                 </header>
                 <div class="block-book">
-                    <div class="block-book-demo"></div>
+                    <div class="block-book-demo">
+                        <h2 class="block-book-demo__title">Good book<span>Don’t judge a book by its cover</span></h2>
+                        <p class="block-book-demo__author">- By Emma Anderson</p>
+                    </div>
                     <div class="block-text">
                         <p class="block-text__name">- By Emma Anderson</p>
                         <h1 class="block-text__title block-text__title--main-other-style">BUKEE: THE BOOK
@@ -82,17 +86,21 @@
                                 Emma Anderson<span>A room without books is like a body without a soul</span>
                             </h2>
                             <p class="block-text__description block-text__description--color">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt
                                 ut
-                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco
                                 laboris nisi ut aliquip ex ea commodo consequat.
                             </p>
                             <p class="block-text__description block-text__description--color">
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla
+                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                deserunt
                                 mollit anim id est laborum. Sed ut
                             </p>
-                            <a class="block-text__btn" href="">Read full biography</a>
+                            <a class="block-text__btn block-text__btn-shadow-color" href="">Read full biography</a>
                         </div>
                         <div class="block-ava">
                             <div class="block-ava__bg"></div>
@@ -111,23 +119,23 @@
         <div class="page-contents page_gray" id="contents">
             <div class="contents">
                 <div class="wrap">
-                    <h2 class="page__title">Book Contents</h2>
-                    <p class="page__subtitle">Let’s see what we have covered in the book</p>
+                    <h2 class="page-contents__title">Book Contents</h2>
+                    <p class="page-contents__subtitle">Let’s see what we have covered in the book</p>
                     <div class="block-about">
                         <div class="block-about-text">
                             <h3>About the book</h3>
-                            <p>
+                            <p class="block-about-text__desc">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna ali qua. Ut enim ad minim veniam, quis nostrud
                                 exercitation ull amco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
                                 dolor in reprehenderit in voluptate velit esse cillu m dolore eu fugiat nulla pariatur.
                             </p>
-                            <div>
-                                <p>Featured in:</p>
+                            <div class="block-about-social">
+                                <p class="block-about-social__title">Featured in:</p>
                                 <ul>
-                                    <li><a href=""></a></li>
-                                    <li><a href=""></a></li>
-                                    <li><a href=""></a></li>
+                                    <li><a href=""><i class="fab fa-stack-overflow"></i></a></li>
+                                    <li><a href=""><i class="fab fa-amazon"></i></a></li>
+                                    <li><a href=""><i class="fab fa-sass"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -151,6 +159,95 @@
                 </div>
             </div>
 
+        </div>
+
+        <div class="page-books" id="books">
+            <div class="books">
+                <div class="wrap">
+                    <h2 class="page-books__title">Other Books<span>Some books you might be interested in</span></h2>
+                    <div class="block-book-demo-mini-container">
+                        <div class="block-book-demo-mini">
+                            <h2 class="block-book-demo-mini__title">Inception<span>Books are the best friends</span>
+                            </h2>
+                            <p class="block-book-demo-mini__author">- By Emma Anderson</p>
+                        </div>
+                        <div class="block-book-demo-mini">
+                            <h2 class="block-book-demo-mini__title">Fight Club<span>Books are the best friends</span>
+                            </h2>
+                            <p class="block-book-demo-mini__author">- By Emma Anderson</p>
+                        </div>
+                        <div class="block-book-demo-mini">
+                            <h2 class="block-book-demo-mini__title">Daredevils<span>Books are the best friends</span>
+                            </h2>
+                            <p class="block-book-demo-mini__author">- By Emma Anderson</p>
+                        </div>
+                    </div>
+
+                    <div class="block-book-demo-mini-information">
+                        <div class="block-book-demo-mini-information-container">
+                            <h2 class="block-book-demo-mini-information__title">Inception</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut
+                                labore et dolore</p>
+                            <a href="">READ MORE</a>
+                        </div>
+                        <div class="block-book-demo-mini-information-container">
+                            <h2 class="block-book-demo-mini-information__title">Fight Club</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut
+                                labore et dolore</p>
+                            <a href="">READ MORE</a>
+                        </div>
+                        <div class="block-book-demo-mini-information-container">
+                            <h2 class="block-book-demo-mini-information__title">Daredevils</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut
+                                labore et dolore</p>
+                            <a href="">READ MORE</a>
+                        </div>
+                    </div>
+                    <a class="page-books__btn" href="">Browse all books</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-skills" id="skills">
+            <div class="skills">
+                <div class="wrap">
+                    <div class="block-skills">
+                        <div class="block-skills-ava">
+                            <div class="block-skills-ava__bg"></div>
+                            <img class="block-skills-ava__img" height="606" src="../img/avatar-2.png" width="440"/>
+                        </div>
+                        <div class="block-text-skills-width">
+                            <p class="block-text__page-skills-name">- Emma Anderson</p>
+                            <h2 class="block-text__title block-text__title--about-other-style">
+                                Upcoming Events<span>Some upcoming events you might be interested in</span>
+                            </h2>
+                            <div class="block-text-item">
+                                <p class="block-text-item__date">November 21, 2018</p>
+                                <h4 class="block-text-item__title">Book signing - San francisco, CA</h4>
+                                <p class="block-text-item__desc">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Quis ipsum suspen disse ultrices
+                                    gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                                </p>
+                                <a class="block-text-item__btn" href="">Register</a>
+                            </div>
+                            <div class="block-text-item">
+                                <p class="block-text-item__date">November 21, 2018</p>
+                                <h4 class="block-text-item__title">Book reading - Los Angeles, CA</h4>
+                                <p class="block-text-item__desc">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Quis ipsum suspen disse ultrices
+                                    gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                                </p>
+                                <a class="block-text-item__btn" href="">Register</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         @@include("../blocks/modules/header/header.html")
