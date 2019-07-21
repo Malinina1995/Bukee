@@ -16,6 +16,7 @@ $p-color: #696980;
 $open-sans: "Open Sans", sans-serif;
 $roboto-slab: "Roboto Slab", serif;
 $btn-linear-gradient: linear-gradient(70deg, #65e49c, #65e4b0);
+$gray-color:#9191b5;
 
 body {
     font-family: $roboto-slab;
@@ -29,6 +30,10 @@ header {
 h3 {
     font-size: 24px;
     color: $h-color;
+}
+
+button:focus {
+    outline: none;
 }
 
 .wrap {
@@ -72,6 +77,16 @@ h3 {
         background-color: $bg-light-color;
     }
 
+    &-clients {
+        display: flex;
+        &__title {
+            font-size: 48px;
+            color: $h-color;
+            letter-spacing: 1.9px;
+            margin-top: 30px;
+        }
+    }
+
     &-books {
         display: flex;
 
@@ -106,6 +121,11 @@ h3 {
             }
         }
     }
+}
+
+.clients {
+    width: 100%;
+    margin: 122px 0 139px 0;
 }
 
 .header {
@@ -185,7 +205,7 @@ h3 {
 
         &__desc {
             font-size: 15px;
-            color: #9191a2;
+            color: $p-color;
             font-family: $open-sans;
             line-height: 23px;
             letter-spacing: 0.7px;
@@ -619,4 +639,225 @@ h3 {
 .books {
     width: 100%;
     margin: 148px 0 488px 0;
+}
+
+.block-blog {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 88px;
+
+    &__desc {
+        color: $p-color;
+        font-family: $open-sans;
+        line-height: 25px;
+        letter-spacing: 0.8px;
+        margin-top: 0;
+    }
+
+    &-img {
+        position: relative;
+        width: 369px;
+        height: 224px;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 369px;
+            height: 224px;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+    }
+
+    h4 {
+        font-size: 18px;
+        color: $bg-dark-color;
+        margin-top: 18px;
+        letter-spacing: 0.9px;
+    }
+
+    &__info {
+        font-size: 15px;
+        color: $p-color;
+        font-family: $open-sans;
+        letter-spacing: 1.1px;
+
+        p {
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: $light-color;
+        }
+    }
+}
+
+.portfolio {
+    width: 100%;
+    margin: 122px 0 160px 0;
+}
+
+.page-portfolio {
+    display: flex;
+
+    &__title {
+        text-align: center;
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 45px;
+        margin-top: 30px;
+        letter-spacing: 1.9px;
+        color: #44444f;
+
+
+        span {
+            display: block;
+            color: $light-color;
+            font-size: 18px;
+            letter-spacing: 0.9px;
+            margin-top: 10px;
+        }
+    }
+
+    &__btn {
+        display: block;
+        max-width: 263px;
+        margin: 65px auto 0 auto;
+        padding: 14px 0;
+        background: $btn-linear-gradient;
+        color: $main-color;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 3px;
+        font-size: 18px;
+        letter-spacing: 0.7px;
+        box-shadow: 0 -2px #b2f1be inset;
+    }
+}
+
+.block-letter {
+    display: flex;
+    justify-content: space-between;
+
+    &-item {
+        flex-basis: 49%;
+    }
+
+    &__text {
+        font-family: $open-sans;
+        color: $p-color;
+        font-size: 15px;
+        letter-spacing: 0.7px;
+        line-height: 24px;
+        margin-top: 10px;
+    }
+
+    &__input {
+        box-sizing: border-box;
+        width: 100%;
+        border: none;
+        padding: 15px 30px;
+        background-color: $bg-dark-color;
+        color: $gray-color;
+        border-radius: 3px;
+        margin-top: 39px;
+        letter-spacing: 0.5px;
+        font-family: $open-sans;
+
+        &::placeholder {
+            color: $gray-color;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__btn {
+        display: block;
+        width: 100%;
+        border: none;
+        padding: 14px 0;
+        background: $btn-linear-gradient;
+        color: $main-color;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 3px;
+        font-size: 18px;
+        letter-spacing: 0.7px;
+        box-shadow: 0 -2px #b2f1be inset;
+        margin-top: 20px;
+    }
+}
+
+.footer {
+    background-color: $bg-dark-color;
+    display: flex;
+    color: $gray-color;
+}
+
+.contacts {
+    width: 100%;
+    margin: 159px 0 211px 0;
+}
+
+.block-footer {
+    display: flex;
+    justify-content: space-between;
+
+    &__text {
+        margin-top: 30px;
+        letter-spacing: 0.9px;
+        line-height: 23px;
+        font-family: $open-sans;
+    }
+
+    &__copy {
+        margin-top: 28px;
+        letter-spacing: 0.75px;
+    }
+
+    &>div {
+        flex-basis: 35%;
+    }
+
+    &__logo {
+        display: block;
+        width: 137px;
+        height: 28px;
+        background-image: url("../img/svg/Logo-footer.svg");
+        background-repeat: no-repeat;
+    }
+
+    &__title {
+        font-size: 18px;
+        text-transform: uppercase;
+        color: $light-color;
+        letter-spacing: 0.8px;
+        margin-bottom: 22px;
+    }
+
+    &__list {
+        list-style-type: none;
+        line-height: 28px;
+        letter-spacing: 0.5px;
+        margin-bottom: 12px;
+
+        &-line-height {
+            line-height: 25px;
+        }
+    }
+
+    &__social {
+        display: flex;
+        list-style-type: none;
+
+        &>li {
+            margin-right: 11px;
+        }
+    }
 }
