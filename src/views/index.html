@@ -28,6 +28,8 @@
               rel="stylesheet">
         <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
         <link href="../styles/main.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet"
+              type="text/css"/>
     </head>
     <body>
         <div class="page-main">
@@ -215,8 +217,56 @@
         </div>
 
         <div class="page-education" id="education">
-            <div class="wrap">
-
+            <div class="education">
+                <div class="wrap">
+                    <div class="block-slider">
+                        <div>
+                            <div class="block-slider-ava">
+                                <div class="block-slider-thumb">
+                                    <img src="../img/girl.png" alt="">
+                                </div>
+                                <span class="block-slider-bq"></span>
+                            </div>
+                            <h2>Kate Dennings</h2>
+                            <p class="block-slider-expert">Calligraphy Expert</p>
+                            <p class="block-slider-opinion">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
+                                viverra maecenas accumsan lacus vel facilisis.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="block-slider-ava">
+                                <div class="block-slider-thumb">
+                                    <img src="../img/girl.png" alt="">
+                                </div>
+                                <span class="block-slider-bq"></span>
+                            </div>
+                            <h2>Kate Dennings</h2>
+                            <p class="block-slider-expert">Calligraphy Expert</p>
+                            <p class="block-slider-opinion">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
+                                viverra maecenas accumsan lacus vel facilisis.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="block-slider-ava">
+                                <div class="block-slider-thumb">
+                                    <img src="../img/girl.png" alt="">
+                                </div>
+                                <span class="block-slider-bq"></span>
+                            </div>
+                            <h2>Kate Dennings</h2>
+                            <p class="block-slider-expert">Calligraphy Expert</p>
+                            <p class="block-slider-opinion">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
+                                viverra maecenas accumsan lacus vel facilisis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -243,7 +293,7 @@
                                 </p>
                                 <a class="block-text-item__btn" href="">Register</a>
                             </div>
-                            <div class="block-text-item">
+                            <div class="block-text-item block-text-item__margin-top">
                                 <p class="block-text-item__date">November 21, 2018</p>
                                 <h4 class="block-text-item__title">Book reading - Los Angeles, CA</h4>
                                 <p class="block-text-item__desc">
@@ -334,13 +384,15 @@
                 <div class="wrap">
                     <div class="block-footer">
                         <div>
-                            <a class="block-footer__logo" href=""></a>
-                            <p class="block-footer__text">
-                                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat.
-                            </p>
-                            <p class="block-footer__copy">© 2018 Bukee Private Limited.</p>
+                            <div class="block-footer__max-width">
+                                <a class="block-footer__logo" href=""></a>
+                                <p class="block-footer__text">
+                                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat.
+                                </p>
+                                <p class="block-footer__copy">© 2018 Bukee Private Limited.</p>
+                            </div>
                         </div>
                         <div>
                             <h2 class="block-footer__title">Useful Links</h2>
@@ -377,5 +429,16 @@
 
         <script src="../js/main.js"></script>
         <script src="../js/vendor.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+                type="text/javascript"></script>
+        <script>
+            $(document).ready(function () {
+                $('.block-slider').slick({
+                    dots:true,
+                    arrows:false
+                });
+            });
+        </script>
     </body>
 </html>
