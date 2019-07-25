@@ -37,6 +37,7 @@ button:focus {
 }
 
 .wrap {
+    box-sizing: border-box;
     width: 100%;
     max-width: 1170px;
     margin: 0 auto;
@@ -106,6 +107,11 @@ button:focus {
             font-size: 18px;
             letter-spacing: 0.7px;
             box-shadow: 0 -2px #b2f1be inset;
+
+
+            @media(max-width: 630px) {
+                margin: 0 auto 10px;
+            }
         }
 
         &__title {
@@ -129,6 +135,10 @@ button:focus {
 .clients {
     width: 100%;
     margin: 122px 0 139px 0;
+
+    @media(max-width: 630px) {
+        margin: 10px auto 30px;
+    }
 }
 
 .header {
@@ -316,6 +326,12 @@ button:focus {
         &-shadow-color {
             box-shadow: 0 -2px #b2f1be inset;
         }
+
+        &-main {
+            @media(max-width: 1020px) {
+                margin: 47px auto 15px;
+            }
+        }
     }
 
     & small {
@@ -342,6 +358,12 @@ button:focus {
     justify-content: flex-start;
     margin-top: 180px;
 
+    @media(max-width: 1020px) {
+        flex-direction: column-reverse;
+        text-align: center;
+        margin-top: 50px;
+    }
+
     &-demo {
         display: block;
         flex-basis: 500px;
@@ -350,6 +372,15 @@ button:focus {
         height: 639px;
         background-image: url("../img/book.png");
         background-repeat: no-repeat;
+
+        @media(max-width: 1020px) {
+            margin: 47px auto 0;
+        }
+
+
+        @media(max-width: 1020px) {
+
+        }
 
         &__title {
             font-size: 36px;
@@ -388,6 +419,16 @@ button:focus {
             height: 409px;
             background-image: url("../img/mini-book.png");
             background-repeat: no-repeat;
+            margin-left: 45px;
+
+            @media(max-width: 1020px) {
+                margin-left: 70px;
+            }
+
+            @media(max-width: 630px) {
+                margin: 10px auto 10px;
+            }
+
 
             &__title {
                 font-size: 24px;
@@ -414,21 +455,44 @@ button:focus {
                 justify-content: space-between;
                 text-align: center;
 
-                & a {
-                    color: $light-color;
-                    font-size: 15px;
-                    font-family: $open-sans;
-                    text-decoration: none;
-                    font-weight: 700;
-                    letter-spacing: 1.1px;
-                }
-
                 &-container {
                     flex-basis: 30%;
                     color: $p-color;
                     font-size: 15px;
                     line-height: 25px;
                     letter-spacing: 0.7px;
+                    text-align: center;
+
+                    @media(max-width: 1020px) {
+                        margin-bottom: 50px;
+                    }
+
+                    &-info {
+                        @media(max-width: 1020px) {
+                            margin: 0 auto;
+                        }
+                    }
+
+                    & p {
+                        text-align: center;
+
+                        @media(max-width: 1020px) {
+                            max-width: 400px;
+                        }
+                    }
+
+                    & a {
+                        color: $light-color;
+                        font-size: 15px;
+                        font-family: $open-sans;
+                        text-decoration: none;
+                        font-weight: 700;
+                        letter-spacing: 1.1px;
+
+                        &:hover {
+                            border-bottom: solid 3px $light-color;
+                        }
+                    }
                 }
 
                 &__title {
@@ -436,6 +500,7 @@ button:focus {
                     font-size: 24px;
                     margin-top: 33px;
                     letter-spacing: 1px;
+                    text-align: center;
                 }
             }
 
@@ -457,12 +522,32 @@ button:focus {
         margin-top: 87px;
         margin-left: 44px;
         margin-right: 44px;
+        @media(max-width: 1020px) {
+            flex-direction: column;
+        }
+
+
+        @media(max-width: 630px) {
+            margin: 20px auto 0;
+        }
+
+        &-info {
+            @media(max-width: 1020px) {
+                margin: 0 auto;
+            }
+        }
     }
 }
 
 .block-author {
     display: flex;
     justify-content: space-between;
+
+    @media(max-width: 630px) {
+        flex-direction: column;
+        margin: 10px auto 10px;
+        padding: 0;
+    }
 }
 
 .block-ava {
@@ -499,6 +584,12 @@ button:focus {
     margin-top: 85px;
     padding-bottom: 172px;
 
+    @media(max-width: 630px) {
+        flex-direction: column-reverse;
+        margin: 10px auto 10px;
+        padding-bottom: 50px;
+    }
+
     &-ava {
         position: relative;
 
@@ -514,6 +605,12 @@ button:focus {
                 width: 300px;
                 height: 513px;
             }
+
+
+            @media(max-width: 630px) {
+                width: 250px;
+                height: 440px;
+            }
         }
 
         &__img {
@@ -524,6 +621,12 @@ button:focus {
                 width: 300px;
                 height: 413px;
             }
+
+
+            @media(max-width: 630px) {
+                width: 250px;
+                height: 344px;
+            }
         }
     }
 }
@@ -531,6 +634,10 @@ button:focus {
 .skills {
     width: 100%;
     margin: 75px 0 0 0;
+
+    @media(max-width: 630px) {
+        margin: 10px auto 10px;
+    }
 }
 
 .page-skills {
@@ -545,6 +652,10 @@ button:focus {
 
     @media (max-width: 750px) {
         flex-direction: column;
+    }
+
+    @media(max-width: 630px) {
+        margin: 30px auto 10px;
     }
 
     p {
@@ -567,11 +678,19 @@ button:focus {
 .contents {
     width: 100%;
     margin: 150px 0 0 0;
+
+    @media(max-width: 630px) {
+        margin: 10px auto 10px;
+    }
 }
 
 .about {
     width: 100%;
     margin: 160px 0 0 0;
+
+    @media(max-width: 630px) {
+        margin: 10px auto 10px;
+    }
 }
 
 .block-about {
@@ -579,6 +698,11 @@ button:focus {
     justify-content: space-between;
     margin-top: 85px;
     padding-bottom: 233px;
+
+    @media(max-width: 630px) {
+        margin: 10px auto 10px;
+        padding: 0;
+    }
 
     @media(max-width: 1020px) {
         flex-direction: column;
@@ -687,6 +811,26 @@ button:focus {
                     color: $main-color;
                 }
             }
+
+            &_next {
+                counter-reset: list 10;
+                position: relative;
+                margin-top: 20px;
+
+                &:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: -10px;
+                    width: 100px;
+                    height: 2px;
+                    background-color: #5fc9ad;
+                }
+            }
+            
+            @media(max-width: 630px) {
+                column-count: 1;
+            }
         }
     }
 }
@@ -699,6 +843,10 @@ button:focus {
 .books {
     width: 100%;
     margin: 148px 0 167px 0;
+
+    @media(max-width: 630px) {
+        margin: 10px auto 10px;
+    }
 }
 
 .block-blog {
@@ -710,6 +858,11 @@ button:focus {
         flex-direction: column;
         max-width: 550px;
         margin: 85px auto 0;
+    }
+
+
+    @media(max-width: 630px) {
+        margin: 20px auto 0;
     }
 
     &-item {
@@ -771,6 +924,10 @@ button:focus {
 .portfolio {
     width: 100%;
     margin: 122px 0 160px 0;
+
+    @media(max-width: 630px) {
+        margin: 10px auto 30px;
+    }
 }
 
 .page-portfolio {
@@ -785,6 +942,9 @@ button:focus {
         letter-spacing: 1.9px;
         color: #44444f;
 
+        @media(max-width: 630px) {
+            margin: 10px auto 10px;
+        }
 
         span {
             display: block;
@@ -808,6 +968,10 @@ button:focus {
         font-size: 18px;
         letter-spacing: 0.7px;
         box-shadow: 0 -2px #b2f1be inset;
+
+        @media(max-width: 630px) {
+            margin: 10px auto 10px;
+        }
     }
 }
 
@@ -815,8 +979,17 @@ button:focus {
     display: flex;
     justify-content: space-between;
 
+    @media(max-width: 1020px) {
+        flex-direction: column;
+        text-align: center;
+    }
+
     &-item {
         flex-basis: 49%;
+
+        @media(max-width: 1020px) {
+            flex-basis: 100%;
+        }
     }
 
     &__text {
@@ -839,6 +1012,10 @@ button:focus {
         margin-top: 37px;
         letter-spacing: 0.5px;
         font-family: $open-sans;
+
+        @media(max-width: 1020px) {
+            max-width: 500px;
+        }
 
         &::placeholder {
             color: $gray-color;
@@ -863,6 +1040,11 @@ button:focus {
         letter-spacing: 0.7px;
         box-shadow: 0 -2px #b2f1be inset;
         margin-top: 20px;
+
+        @media(max-width: 1020px) {
+            max-width: 500px;
+            margin: 20px auto 0;
+        }
     }
 }
 
@@ -875,11 +1057,19 @@ button:focus {
 .contacts {
     width: 100%;
     margin: 159px 0 211px 0;
+
+    @media(max-width: 630px) {
+        margin: 10px auto 10px;
+    }
 }
 
 .education {
     width: 100%;
     margin: 165px 0 166px 0;
+
+    @media(max-width: 630px) {
+        margin: 10px auto 10px;
+    }
 }
 
 .page-education {
@@ -893,6 +1083,12 @@ button:focus {
 .block-footer {
     display: flex;
     justify-content: space-between;
+
+    @media(max-width: 630px) {
+        flex-direction: column;
+        margin: 10px auto 10px;
+    }
+
 
     &__max-width {
         max-width: 400px;

@@ -74,7 +74,7 @@
                             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                             mollit anim id est laborum. Sed ut
                         </p>
-                        <a class="block-text__btn" href="">Buy this book - $15.00</a>
+                        <a class="block-text__btn block-text__btn-main" href="">Buy this book - $15.00</a>
                         <small>* Some conditions may applicable</small>
                     </div>
                 </div>
@@ -158,7 +158,19 @@
                                 <li>Consectetur adipisicing elit</li>
                                 <li>Labore et dolore magna</li>
                             </ol>
-                            <button class="block-about-table__btn">More</button>
+                             <ol class="block-about-table__list block-about-table__list_next" id="nextContentsList" style="display: none;">
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Consectetur adipisicing elit</li>
+                                <li>Labore et dolore magna</li>
+                                <li>Consectetur adipisicing elit</li>
+                                <li>Labore et dolore magna</li>
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Consectetur adipisicing elit</li>
+                                <li>Labore et dolore magna</li>
+                                <li>Consectetur adipisicing elit</li>
+                                <li>Labore et dolore magna</li>
+                            </ol>
+                            <button id="nextContents" class="block-about-table__btn">More</button>
                         </div>
                     </div>
                 </div>
@@ -171,44 +183,49 @@
                 <div class="wrap">
                     <h2 class="page-books__title">Other Books<span>Some books you might be interested in</span></h2>
                     <div class="block-book-demo-mini-container">
-                        <div class="block-book-demo-mini">
-                            <h2 class="block-book-demo-mini__title">Inception<span>Books are the best friends</span>
-                            </h2>
-                            <p class="block-book-demo-mini__author">- By Emma Anderson</p>
+                        <div class="block-book-demo-mini-container-info">
+                            <div class="block-book-demo-mini">
+                                <h2 class="block-book-demo-mini__title">Inception<span>Books are the best friends</span>
+                                </h2>
+                                <p class="block-book-demo-mini__author">- By Emma Anderson</p>
+                            </div>
+                            <div class="block-book-demo-mini-information-container">
+                                <h2 class="block-book-demo-mini-information__title">Inception</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut
+                                    labore et dolore</p>
+                                <a href="">READ MORE</a>
+                            </div>
                         </div>
-                        <div class="block-book-demo-mini">
-                            <h2 class="block-book-demo-mini__title">Fight Club<span>Books are the best friends</span>
-                            </h2>
-                            <p class="block-book-demo-mini__author">- By Emma Anderson</p>
-                        </div>
-                        <div class="block-book-demo-mini">
-                            <h2 class="block-book-demo-mini__title">Daredevils<span>Books are the best friends</span>
-                            </h2>
-                            <p class="block-book-demo-mini__author">- By Emma Anderson</p>
-                        </div>
-                    </div>
 
-                    <div class="block-book-demo-mini-information">
-                        <div class="block-book-demo-mini-information-container">
-                            <h2 class="block-book-demo-mini-information__title">Inception</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore</p>
-                            <a href="">READ MORE</a>
+                        <div class="block-book-demo-mini-container-info">
+                            <div class="block-book-demo-mini">
+                                <h2 class="block-book-demo-mini__title">Fight Club<span>Books are the best friends</span>
+                                </h2>
+                                <p class="block-book-demo-mini__author">- By Emma Anderson</p>
+                            </div>
+                            <div class="block-book-demo-mini-information-container">
+                                <h2 class="block-book-demo-mini-information__title">Fight Club</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut
+                                    labore et dolore</p>
+                                <a href="">READ MORE</a>
+                            </div>
                         </div>
-                        <div class="block-book-demo-mini-information-container">
-                            <h2 class="block-book-demo-mini-information__title">Fight Club</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore</p>
-                            <a href="">READ MORE</a>
-                        </div>
-                        <div class="block-book-demo-mini-information-container">
-                            <h2 class="block-book-demo-mini-information__title">Daredevils</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore</p>
-                            <a href="">READ MORE</a>
+
+                        <div class="block-book-demo-mini-container-info">
+                            <div class="block-book-demo-mini">
+                                <h2 class="block-book-demo-mini__title">Daredevils<span>Books are the best friends</span>
+                                </h2>
+                                <p class="block-book-demo-mini__author">- By Emma Anderson</p>
+                            </div>
+                            <div class="block-book-demo-mini-information-container">
+                                <h2 class="block-book-demo-mini-information__title">Daredevils</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut
+                                    labore et dolore</p>
+                                <a href="">READ MORE</a>
+                            </div>
                         </div>
                     </div>
                     <a class="page-books__btn" href="">Browse all books</a>
@@ -447,6 +464,11 @@
                     dots: true,
                     arrows: false
                 });
+            });
+
+            $("#nextContents").click(function(){
+                $("#nextContentsList").fadeIn();
+                $("#nextContents").hide();
             });
         </script>
     </body>
