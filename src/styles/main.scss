@@ -18,9 +18,35 @@ $roboto-slab: "Roboto Slab", serif;
 $btn-linear-gradient: linear-gradient(70deg, #65e49c, #65e4b0);
 $gray-color: #9191b5;
 
+@media(max-width: 1000px) {
+    .header-list {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+    }
+}
+
 body {
     font-family: $roboto-slab;
     font-size: 15px;
+}
+
+.btn__menu {
+    display: none;
+    border: none;
+    background-color: transparent;
+}
+
+.btn__menu:focus {
+    outline: none;
+}
+
+.btn__menu svg {
+    width: 50px;
+    height: 50px;
+    fill: #fff;
 }
 
 header {
@@ -48,7 +74,16 @@ button:focus {
 .page-main {
     background: $linear-gradient;
     color: $main-color;
-    padding-bottom: 162px;
+    display: flex;
+}
+
+.main {
+    width: 100%;
+    margin: 17px 0 139px 0;
+
+    @media(max-width: 500px) {
+        margin-bottom: 0;
+    }
 }
 
 .page-about {
@@ -372,15 +407,19 @@ button:focus {
         height: 639px;
         background-image: url("../img/book.png");
         background-repeat: no-repeat;
+        background-size: contain;
+
+        @media(max-width: 500px) {
+            width: 250px;
+            height: auto;
+            min-height: 0;
+        }
 
         @media(max-width: 1020px) {
+            min-height: 639px;
             margin: 47px auto 0;
         }
 
-
-        @media(max-width: 1020px) {
-
-        }
 
         &__title {
             font-size: 36px;
@@ -390,6 +429,12 @@ button:focus {
             top: 110px;
             left: 127px;
             letter-spacing: 1.3px;
+
+            @media(max-width: 500px) {
+                top: 70px;
+                left: 26px;
+                font-size: 24px;
+            }
 
             span {
                 display: block;
@@ -410,6 +455,11 @@ button:focus {
             bottom: 40px;
             left: 85px;
             letter-spacing: 0.6px;
+
+            @media(max-width: 500px) {
+                top: 310px;
+                left: 36px;
+            }
         }
 
         &-mini {
@@ -553,6 +603,10 @@ button:focus {
 .block-ava {
     position: relative;
 
+    @media(max-width: 600px) {
+        margin: 0 auto;
+    }
+
     &__bg {
         background: $linear-gradient;
         position: absolute;
@@ -565,6 +619,11 @@ button:focus {
             width: 300px;
             height: 412px;
         }
+
+        @media(max-width: 370px) {
+            width: 200px;
+            height: 271px;
+        }
     }
 
     &__img {
@@ -574,6 +633,13 @@ button:focus {
         @media(max-width: 1020px) {
             width: 300px;
             height: 319px;
+        }
+
+        @media(max-width: 370px) {
+            width: 200px;
+            height: 213px;
+            margin-top: 25px;
+            margin-right: 25px;
         }
     }
 }
@@ -593,6 +659,10 @@ button:focus {
     &-ava {
         position: relative;
 
+        @media(max-width: 630px) {
+            margin: 0 auto;
+        }
+
         &__bg {
             background: $linear-gradient;
             position: absolute;
@@ -606,12 +676,12 @@ button:focus {
                 height: 513px;
             }
 
-
-            @media(max-width: 630px) {
+            @media(max-width: 400px) {
                 width: 250px;
-                height: 440px;
+                height: 448px;
             }
         }
+
 
         &__img {
             margin-top: 49px;
@@ -622,8 +692,7 @@ button:focus {
                 height: 413px;
             }
 
-
-            @media(max-width: 630px) {
+            @media(max-width: 400px) {
                 width: 250px;
                 height: 344px;
             }
@@ -1261,6 +1330,10 @@ button:focus {
         height: 56px;
         transform: rotate(4.5deg) translateX(-3px) translateY(28px) scaleX(2);
         background-color: $bg-dark-color;
+
+        @media(min-width: 1200px) {
+            transform: rotate(2.5deg) translateX(-3px) translateY(28px) scaleX(2);
+        }
     }
 
     &:after {
@@ -1273,6 +1346,10 @@ button:focus {
         height: 56px;
         transform: rotate(-4.5deg) translateY(28px) scaleX(2);
         background-color: $bg-dark-color;
+
+        @media(min-width: 1200px) {
+            transform: rotate(-2.5deg) translateX(-3px) translateY(28px) scaleX(2);
+        }
     }
 }
 
@@ -1280,6 +1357,12 @@ button:focus {
     width: 100%;
     height: 56px;
     background-color: $bg-dark-color;
+
+    @media(max-width: 640px) {
+        &::before, &::after {
+            display: none;
+        }
+    }
 
     &:before {
         content: "";
@@ -1291,6 +1374,10 @@ button:focus {
         height: 56px;
         transform: rotate(4.5deg) translateX(-3px) translateY(817px) scaleX(2);
         background-color: #fff;
+
+        @media(min-width: 1200px) {
+            transform: rotate(2.5deg) translateX(-3px) translateY(817px) scaleX(2);
+        }
     }
 
     &:after {
@@ -1303,5 +1390,45 @@ button:focus {
         height: 56px;
         transform: rotate(-4.5deg) translateY(817px) scaleX(2);
         background-color: #fff;
+
+        @media(min-width: 1200px) {
+            transform: rotate(-2.5deg) translateX(-3px) translateY(817px) scaleX(2);
+        }
     }
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    max-width: 150px;
+    margin: 10px auto 0;
+    text-align: center;
+    box-shadow: 0 0 10px #0000007d;
+    background: #3e3e3e;
+    padding: 20px 10px;
+
+    a {
+        color: $light-color;
+    }
+}
+
+.btn__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    color: $light-color;
+    opacity: 0.2;
+    transition: 0.3s;
+}
+
+.btn__close:hover {
+    opacity: 1;
 }
